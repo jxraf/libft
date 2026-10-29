@@ -6,13 +6,13 @@
 /*   By: ajenah <ajenah@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/26 09:30:41 by ajenah            #+#    #+#             */
-/*   Updated: 2026/10/26 12:24:13 by ajenah           ###   ########.fr       */
+/*   Updated: 2026/10/29 18:55:49 by ajenah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strchr(const char *src, int find)
+char	*ft_strchr(const char *src, int find)
 {
 	while (*src != (char)find)
 	{
