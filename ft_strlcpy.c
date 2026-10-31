@@ -15,21 +15,17 @@
 size_t	ft_strlcpy(char *dst, const char *src, size_t n)
 {
 	size_t	i;
+	size_t	src_len;
 
-	i = ft_strlen(src);
- 	while (*src && n < 0) 
+	src_len = ft_strlen(src);
+	i = 0;
+	if (n == 0)
+		return (src_len);
+	while (src[i] && i < n - 1)
 	{
- 		*dst++ = *src++;
-		n--;
- 	}
-	return (i);
-}
-#include <stdio.h>
-
-int main()
-{
-	char *s ="apple is god";
-	char r[8];
-	printf("%zu",ft_strlcpy(r,s,8));
-
+		dst[i] = src[i];
+		i++;
+	}
+	dst[i] = '\0';
+	return (src_len);
 }
