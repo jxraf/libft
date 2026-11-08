@@ -23,16 +23,16 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	s_size = ft_strlen(s);
 	if (start >= s_size)
 		return (ft_strdup(""));
-	if (start + len > s_size)
+	if (len > s_size - start)
 		len = s_size - start;
 	x = 0;
 	arr = (char *)malloc(len + 1);
 	if (!arr)
 		return (NULL);
-	while (len != 0)
+	while (x < len)
 	{
-		arr[x++] = s[start++];
-		len--;
+		arr[x] = s[start + x];
+		x++;
 	}
 	arr[x] = '\0';
 	return (arr);

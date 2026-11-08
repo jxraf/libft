@@ -6,7 +6,7 @@
 /*   By: ajenah <ajenah@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 15:27:49 by ajenah            #+#    #+#             */
-/*   Updated: 2026/11/06 12:18:57 by ajenah           ###   ########.fr       */
+/*   Updated: 2026/11/08 15:53:17 by ajenah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,6 @@ void	ft_putendl_fd(char *s, int fd)
 {
 	if (!s)
 		return ;
-	while (*s)
-	{
-		write(fd, &s, 1);
-	}
-	write(fd, "\n", 2);
+	ft_putstr_fd(s, fd);
+	write(fd, "\n", 1);
 }

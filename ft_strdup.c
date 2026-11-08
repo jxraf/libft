@@ -11,12 +11,15 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 char	*ft_strdup(const char *s)
 {
 	char	*arr;
 	size_t	x;
 
+	if (!s)
+		return (NULL);
 	x = (ft_strlen(s) + 1);
 	arr = malloc(x);
 	if (!arr)

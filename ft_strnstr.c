@@ -21,10 +21,10 @@ char	*ft_strnstr(const char *big, char *lil, size_t n)
 	y = 0;
 	if (lil[0] == '\0')
 		return ((char *)big);
-	while (big[x] && x < n)
+	while (x < n && big[x])
 	{
 		y = 0;
-		while (big[x + y] == lil[y] && lil[y] && x + y < n)
+		while (x + y < n && big[x + y] == lil[y] && lil[y])
 			y++;
 		if (lil[y] == '\0')
 			return ((char *)big + x);
