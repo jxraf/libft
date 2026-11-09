@@ -6,7 +6,7 @@
 /*   By: ajenah <ajenah@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/26 13:52:14 by ajenah            #+#    #+#             */
-/*   Updated: 2026/11/08 13:49:58 by ajenah           ###   ########.fr       */
+/*   Updated: 2026/11/09 17:52:27 by ajenah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include <stddef.h>
 # include <unistd.h>
 # include <stdlib.h>
-# include <stdio.h>
 # include <stdint.h>
 
 typedef struct s_list
@@ -25,13 +24,15 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
+int				ft_isascii(int c);
 int				ft_isalnum(int c);
 int				ft_isalpha(int c);
 int				ft_isdigit(int c);
 int				ft_isprint(int c);
 int				ft_tolower(int c);
-int				ft_memcmp(const void *s1, const void *s2, size_t n);
+int				ft_toupper(int c);
 int				ft_atoi(const char *str);
+int				ft_memcmp(const void *s1, const void *s2, size_t n);
 
 void			*ft_calloc(size_t nmemb, size_t size);
 void			*ft_memcpy(void *to, const void *from, size_t n);
@@ -50,6 +51,7 @@ size_t			ft_strlen(const char *str);
 size_t			ft_strlcpy(char *dst, const char *src, size_t size);
 size_t			ft_strlcat(char *dst, const char *src, size_t dstsize);
 
+char			*ft_strnstr(const char *big, char *lil, size_t n);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char			*ft_strtrim(char const *s1, char const *set);
 char			*ft_strdup(const char *s);

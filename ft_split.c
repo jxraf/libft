@@ -33,7 +33,7 @@ static	int	count_words(const char *str, char c)
 	return (count);
 }
 
-static int	extract_next_word(char **s, char *c, char ***result, int *j)
+static int	extract_next_word(char **s, char *c, char **result, int *j)
 {
 	int	len;
 
@@ -44,7 +44,7 @@ static int	extract_next_word(char **s, char *c, char ***result, int *j)
 		len = 0;
 		while ((*s)[len] && (*s)[len] != *c)
 			len++;
-		(*result)[*j] = ft_substr(*s, 0, len);
+		(result)[*j] = ft_substr(*s, 0, len);
 		if (!(*result)[*j])
 			return (0);
 		(*j)++;
@@ -75,7 +75,7 @@ char	**ft_split(char const *s, char c)
 	j = 0;
 	while (*s)
 	{
-		if (!extract_next_word((char **)&s, &c, &result, &j))
+		if (!extract_next_word((char **)&s, &c, result, &j))
 		{
 			free_split(result, j);
 			return (NULL);
