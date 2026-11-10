@@ -51,7 +51,7 @@ size_t			ft_strlen(const char *str);
 size_t			ft_strlcpy(char *dst, const char *src, size_t size);
 size_t			ft_strlcat(char *dst, const char *src, size_t dstsize);
 
-char			*ft_strnstr(const char *big, char *lil, size_t n);
+char			*ft_strnstr(const char *big, const char *lil, size_t n);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char			*ft_strtrim(char const *s1, char const *set);
 char			*ft_strdup(const char *s);
