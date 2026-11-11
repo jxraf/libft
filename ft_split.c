@@ -45,7 +45,7 @@ static int	extract_next_word(char **s, char *c, char **result, int *j)
 		while ((*s)[len] && (*s)[len] != *c)
 			len++;
 		(result)[*j] = ft_substr(*s, 0, len);
-		if (!(*result)[*j])
+		if (!result[*j])
 			return (0);
 		(*j)++;
 		*s += len;
